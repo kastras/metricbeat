@@ -1,11 +1,8 @@
 ---
-- hosts: all
-
-  tasks:
-    - name: upgrade all packages on fedora
-      yum: name=* state=latest
-      when: ansible_distribution == "CentOS" or ansible_distribution == "Fedora"
-
-    - name: upgrade all paquetes on ubuntu
-      apt: name=* state=latest
-      when: ansible_distribution == "Debian" or ansible_distribution == "Ubuntu"
+  - hosts: all
+    tasks:
+    - name: Ejecutamos el comando uptime
+      command: hostname
+      register: salida_hostname
+    - name: consultar variable
+      debug: var=salida_hostname.stdou
