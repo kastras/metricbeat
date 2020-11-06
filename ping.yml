@@ -1,0 +1,8 @@
+---
+  - hosts: all
+    tasks:
+    - name: Ejecutamos el comando hostname
+      command: hostname
+      register: salida_uptime
+    - name: consultar variable
+      debug: var=salida_uptime.stdout
