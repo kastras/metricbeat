@@ -6,9 +6,9 @@
       package_facts:
         manager: auto
 
-    - name: Print the package facts
-      debug:
-        var: ansible_facts.packages
+#    - name: Print the package facts
+#      debug:
+#        var: ansible_facts.packages
 
     - name: Check whether a package called foobar is installed
       debug:
