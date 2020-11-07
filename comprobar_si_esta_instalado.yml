@@ -1,10 +1,10 @@
 ---
-  - name: buscamos el paquete perdido
-  - host: all
-  - tasks:
+- hosts: all
+
+  tasks:
     - name: Gather the package facts
       package_facts:
-      manager: auto
+        manager: auto
 
     - name: Print the package facts
       debug:
@@ -12,5 +12,5 @@
 
     - name: Check whether a package called foobar is installed
       debug:
-        msg: "{{ ansible_facts.packages['{{ app }}'] | length }} versions of foobar are installed!"
+          msg: "{{ ansible_facts.packages['{{ app }}'] | length }} versions of foobar are installed!"
       when: "'{{ app }}' in ansible_facts.packages"
