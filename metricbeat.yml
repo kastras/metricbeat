@@ -1,0 +1,6 @@
+---
+- name: playbook para instalar metricbeat
+  hosts: all
+  become: true
+  roles:
+    - metricbeat

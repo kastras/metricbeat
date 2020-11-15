@@ -1,0 +1,17 @@
+- name: Instalamos curl
+  apt: name=curl state=latest
+
+- name: Descargamos el paquete para ubuntu
+  get_url:
+    url: https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.9.3-amd64.deb
+    dest: /tmp/metricbeat-7.9.3-amd64.deb
+    mode: '0440'
+
+- name: Install a .deb package
+  apt:
+    deb: /tmp/metricbeat-7.9.3-amd64.deb
+
+- name: borramos el paquete
+  file:
+    path: /tmp/metricbeat-7.9.3-amd64.deb
+    state: absent

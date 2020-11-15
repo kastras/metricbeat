@@ -1,0 +1,32 @@
+- name: instalar metricbeat ubuntu
+  include: metricbeat-ubuntu.yml
+  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+
+- name: instalar metricbeat fedora
+  include: metricbeat-fedora.yml
+  when: ansible_distribution == "Fedora" or ansible_distribution == "CentOS"
+
+- name: Cambiamos la ip del kibana
+  lineinfile:
+    path: /etc/metricbeat/metricbeat.yml
+    regexp: '#host: "localhost:5601"'
+    line: '  host: "{{ IpKibana }}:5601"'
+
+- name: Cambiamos la ip del elasticsearch
+  lineinfile:
+    path: /etc/metricbeat/metricbeat.yml
+    regexp: 'localhost:9200'
+    line: '  hosts: ["{{ IpElasticsearch }}:9200"]'
+
+
+- name: ejecutamos comando para habilitar el sistema
+  command: metricbeat modules enable system
+
+- name: ejecutamos el comando de inicio
+  command: metricbeat setup
+
+- name: Arrancamos y habilitamos el servicio metricbeat
+  service:
+    name: metricbeat
+    enabled: yes
+    state: started
