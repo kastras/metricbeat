@@ -10,7 +10,6 @@
 - name: Instalamos el paquete en fedora
   yum:
     name: /tmp/metricbeat-7.9.3-x86_64.rpm
-    state: present
 
 - name: borramos el paquete en fedora
   file:
