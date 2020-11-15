@@ -10,7 +10,7 @@
 - name: Instalamos el paquete en fedora
   yum:
     name: /tmp/metricbeat-7.9.3-x86_64.rpm
-    disable_gpg_check: False
+    disable_gpg_check: True
 
 - name: borramos el paquete en fedora
   file:
