@@ -1,0 +1,4 @@
+---
+# vars file for metricbeat
+IpElasticsearch: "localhost:9200"
+IpKibana: "localhost:5601"

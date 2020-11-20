@@ -10,13 +10,13 @@
   lineinfile:
     path: /etc/metricbeat/metricbeat.yml
     regexp: '#host: "localhost:5601"'
-    line: '  host: "{{ IpKibana }}:5601"'
+    line: '  host: "{{ IpKibana }}"'
 
 - name: Cambiamos la ip del elasticsearch
   lineinfile:
     path: /etc/metricbeat/metricbeat.yml
     regexp: 'localhost:9200'
-    line: '  hosts: ["{{ IpElasticsearch }}:9200"]'
+    line: '  hosts: ["{{ IpElasticsearch }}"]'
 
 
 - name: ejecutamos comando para habilitar el sistema
