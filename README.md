@@ -1,7 +1,8 @@
-Role Name
+Automated install metricbeat
 =========
 
-This role made a instalation of metricbeat on the list of servers.
+This role made a instalation of metricbeat on the list of servers, start and enable it. 
+
 Requirements
 ------------
 
