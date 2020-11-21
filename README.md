@@ -8,6 +8,7 @@ Requirements
 This role install curl if not exists.
 Role Variables
 --------------
+
 IpKibana : you need to put the ip and the port for kibana, for example "192.168.0.2:5601"
 IpElasticsearch : you need to put the ip and the port for elasticsearch, for example "192.168.0.2:9200"
 Dependencies
