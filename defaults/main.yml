@@ -1,5 +1,5 @@
 ---
-packets:
+packets_ubuntu:
   - curl
   - sysv-rc-conf
 

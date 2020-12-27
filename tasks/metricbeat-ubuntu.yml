@@ -1,5 +1,5 @@
 - name: Instalamos curl
-  apt: name={{ packets }} state=latest
+  apt: name={{ packets_ubuntu }} state=latest
 
 - name: Descargamos el paquete para ubuntu
   get_url:
