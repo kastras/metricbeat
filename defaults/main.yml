@@ -1,2 +1,4 @@
 ---
-# defaults file for metricbeat
+packets:
+  - curl
+  - chkconfig

@@ -1,5 +1,5 @@
 - name: Instalamos curl
-  yum: name=curl state=latest
+  yum: name={{ packets }} state=latest
 
 - name: Descargamos el paquete para fedora
   get_url:

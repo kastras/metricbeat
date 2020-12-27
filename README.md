@@ -1,7 +1,7 @@
 Automated install metricbeat
 =========
 
-This role made a instalation of metricbeat on the list of servers, start and enable it. 
+This role made a instalation of metricbeat on the list of servers, start and enable it.
 
 Requirements
 ------------
@@ -35,5 +35,6 @@ License
 BSD
 
 Author Information
-------------------
 
+Hello I'm Rubén Castrelo and I now trying and learn ansible, If was a issue please advise of that. 
+------------------
