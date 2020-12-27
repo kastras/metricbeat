@@ -1,4 +1,8 @@
 ---
 packets:
   - curl
+  - sysv-rc-conf
+
+packets_fedora:
+  - curl
   - chkconfig
